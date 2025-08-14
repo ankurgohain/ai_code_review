@@ -3,6 +3,7 @@ import "prismjs/themes/prism-tomorrow.css"
 import Editor from "react-simple-code-editor"
 import prism from "prismjs"
 import axios from 'axios'
+import UploadFile from './UploadFile.jsx'
 import './App.css'
 import Markdown from 'react-markdown'
 import rehypeHighlight from 'rehype-highlight';
@@ -27,7 +28,7 @@ const [review, setReview] = useState(``)
   }
 
   return (
-    <>
+    
       <main>
         <div className="left">
           <div className="code">
@@ -47,10 +48,13 @@ const [review, setReview] = useState(``)
             />
             
           </div>
+          {/* <div
+            onClick={UploadFile}
+            className="upload">Upload File</div> */}
           <div
             onClick={reviewCode}
             className="review">Review</div>
-          </div>
+        </div>
           
         <div className="right">
           <Markdown
@@ -60,8 +64,8 @@ const [review, setReview] = useState(``)
           >{review}</Markdown>
         </div>
       </main>
-    </>
-  )
+  );
 }
+  
 
-export default App
+export default App;

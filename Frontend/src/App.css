@@ -23,16 +23,16 @@ main .left,
 main .right {
   height: 100%;
   flex-basis: 50%;
-  border-radius: 0.7rem;
+  border-radius: 0rem;
   border: 2px solid #e0e0e0;         /* Add border */
   box-shadow: 0 2px 8px rgba(0,0,0,0.07); /* Subtle shadow for depth */
-  background: #181818;                /* Slightly lighter than black for left */
+  background: #0530bb;                /* Slightly lighter than black for left */
   margin-bottom: 1rem;
   transition: box-shadow 0.2s;
 }
 
 main .left {
-  background-color: #181818;
+  background-color: #0530bb;
   position: relative;
   padding: 1rem;
 }

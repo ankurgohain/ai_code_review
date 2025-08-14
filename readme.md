@@ -1,72 +1,72 @@
-# 🤖 AI Code Reviewer
+# AI Code Reviewer
 
-AI Code Reviewer is a full-stack web application that integrates Google Gemini AI to intelligently analyze and review code in real time. It empowers developers by offering instant, AI-driven feedback on code quality, potential bugs, optimization opportunities, and best practices — all in a beautifully designed interface. Built with modern web technologies, the platform provides a seamless editing and reviewing experience for developers seeking rapid, actionable insights into their code.🚀
+This project is a web application that uses AI to review code snippets. Users can paste their code into an editor, submit it for review, and receive feedback directly in the application, rendered from Markdown.
 
----
+## Features
 
-## 🛠️ Tech Stack
+-   **Code Editor**: A simple code editor with JavaScript syntax highlighting using Prism.js.
+-   **AI-Powered Feedback**: Integrates with a backend service to provide AI-driven code reviews.
+-   **Markdown Display**: Renders the AI's feedback in a clean, readable format using Markdown.
+
+## Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine.
+
+### Prerequisites
+
+-   Node.js and npm installed on your machine.
+
+### Installation & Setup
+
+The project is divided into a `Frontend` and a `Backend`.
+
+#### Backend
+
+1.  Navigate to the backend project directory.
+2.  Install the necessary dependencies:
+    ```bash
+    npm install cors
+    # You will also need to install your web framework, e.g., express
+    # npm install express
+    ```
+3.  Start the backend server:
+    ```bash
+    # e.g., node index.js or npm start
+    ```
+
+#### Frontend
+
+1.  Navigate to the `Frontend` directory:
+    ```bash
+    cd Frontend
+    ```
+2.  Install the npm packages:
+    ```bash
+    npm install prismjs react-simple-code-editor axios react-markdown rehype-highlight highlight.js
+    ```
+3.  Start the frontend development server:
+    ```bash
+    npm run dev
+    # or npm start
+    ```
+4.  Open your browser and go to `http://localhost:5173` (or the port specified by your Vite/React setup).
+
+## Technologies Used
 
 ### Frontend
 
-- ⚛️ **React (with Vite)** — UI library for building interactive interfaces  
-- 📝 **React Markdown** — For rendering markdown-formatted AI responses  
-- 🌈 **PrismJS** — Syntax highlighting in the code editor  
-- ✍️ **React Simple Code Editor** — Lightweight code editor component  
-- 📡 **Axios** — HTTP client for API communication  
-- 🔍 **rehype-highlight** — Syntax highlighting for markdown code blocks  
-- 🎨 **CSS** — Custom styling for a modern, responsive UI  
+-   React
+-   Axios
+-   Prism.js
+-   React Simple Code Editor
+-   React Markdown
+-   Highlight.js
 
 ### Backend
 
-- 🟢 **Node.js** — JavaScript runtime  
-- 🚂 **Express** — Web server framework  
-- 🤖 **@google/genai** — Google Gemini AI SDK for code review  
-- 🔓 **CORS** — Middleware to enable cross-origin requests  
-- 🔐 **dotenv** — For environment variable management  
-
----
-
-
-## 📂 Project Structure
-
-This project follows a standard full-stack application structure, clearly separating frontend and backend concerns.
-
-```
-code-review/
-├── backend/                                  # Backend server built with Node.js and Express
-│   ├── .env                                  # Environment variables (e.g., API keys, port)
-│   ├── package.json                          # Backend dependencies and scripts
-│   ├── server.js                             # Entry point for the Node.js backend server
-│   └── src/                                  # Source code for the backend application
-│       ├── app.js                            # Express application setup and middleware
-│       ├── controllers/                      # Handles request logic for AI interactions
-│       │   └── ai.controller.js              # Controller for AI code review requests
-│       ├── routes/                           # Defines API endpoints
-│       │   └── ai.routes.js                  # Routes specifically for AI services
-│       └── services/                         # Contains business logic and external API calls
-│           └── ai.service.js                 # Service for interacting with Google Gemini AI
-└── Frontend/                                 # Frontend application built with React and Vite
-    ├── package.json                          # Frontend dependencies and scripts
-    ├── vite.config.js                        # Vite configuration for the React app
-    ├── index.html                            # Main HTML file for the frontend
-    └── src/                                  # Source code for the React application
-        ├── App.jsx                           # Main React component
-        ├── App.css                           # Styles for the App component
-        ├── main.jsx                          # Entry point for the React application
-        └── index.css                         # Global styles for the frontend
-```
-
----
-
-## 🚀 Getting Started
-
-Follow these steps to run the project locally on your machine.
-
----
-
-### 1️⃣ Clone the Repository
-
-```bash
+-   Node.js
+-   CORS
+-   (Presumably a web server like Express)
 git clone https://github.com/joshi-jyoti/AI-Code-Reviewer
 cd code-review
 ```
